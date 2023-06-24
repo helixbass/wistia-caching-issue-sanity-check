@@ -1,7 +1,7 @@
 <script>
 window._wq = window._wq || [];
 _wq.push({
-  id: "4w1htf6q4o",
+  id: "7r020nfxnb",
   options: {
     plugin: {
       "captions-v1": {
@@ -12,8 +12,8 @@ _wq.push({
   }
 });
 
-function loadDifferentVideoWithDifferentSubtitlesLanguageSpecified() {
-  document.querySelector(".wistia_async_4w1htf6q4o").remove();
+function reloadSameVideoWithDifferentSubtitlesLanguageSpecified() {
+  document.querySelector(".wistia_async_7r020nfxnb").remove();
   window.wistiaEmbeds.pop();
   const wistiaDiv = document.createElement("div");
   wistiaDiv.setAttribute("class", "wistia_embed wistia_async_7r020nfxnb");
@@ -35,6 +35,6 @@ function loadDifferentVideoWithDifferentSubtitlesLanguageSpecified() {
 </script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <div id="parent">
-  <div class="wistia_embed wistia_async_4w1htf6q4o" style="height:360px;position:relative;width:640px"></div>
-  <button onclick="loadDifferentVideoWithDifferentSubtitlesLanguageSpecified()" style="margin-top: 20px;">load different video with different subtitles language specified</button>
+  <div class="wistia_embed wistia_async_7r020nfxnb" style="height:360px;position:relative;width:640px"></div>
+  <button onclick="reloadSameVideoWithDifferentSubtitlesLanguageSpecified()" style="margin-top: 20px;">reload same video with different subtitles language specified</button>
 </div>
