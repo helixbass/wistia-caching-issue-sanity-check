@@ -1,0 +1,39 @@
+<script>
+window._wq = window._wq || [];
+_wq.push({
+  id: "qpxihhb76m",
+  options: {
+    plugin: {
+      "captions-v1": {
+        onByDefault: true,
+        language: 'kor' // default to Korean captions
+      }
+    }
+  }
+});
+
+function nextVideo() {
+  document.querySelector(".wistia_async_qpxihhb76m").remove();
+  const wistiaDiv = document.createElement("div");
+  wistiaDiv.setAttribute("class", "wistia_embed wistia_async_4w1htf6q4o");
+  wistiaDiv.setAttribute("style", "height:360px;position:relative;width:640px");
+  document.getElementById("parent").appendChild(wistiaDiv);
+  window._wq = window._wq || [];
+  _wq.push({
+    id: "4w1htf6q4o",
+    options: {
+      plugin: {
+	"captions-v1": {
+	  onByDefault: true,
+	  language: 'vie'
+	}
+      }
+    }
+  });
+}
+</script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<div id="parent">
+  <div class="wistia_embed wistia_async_qpxihhb76m" style="height:360px;position:relative;width:640px"></div>
+  <div onclick="nextVideo()">next video</div>
+</div>
