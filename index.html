@@ -1,40 +1,47 @@
 <script>
 window._wq = window._wq || [];
-_wq.push({
+const englishConfig = {
   id: "7r020nfxnb",
   options: {
     plugin: {
       "captions-v1": {
         onByDefault: true,
-        language: 'vie'
+        language: 'eng'
       }
     }
   }
-});
+};
 
-function reloadSameVideoWithDifferentSubtitlesLanguageSpecified() {
+window._wq.push(englishConfig);
+
+function revokeThenReloadSameVideoWithDifferentSubtitlesLanguageSpecified() {
   document.querySelector(".wistia_async_7r020nfxnb").remove();
-  window.wistiaEmbeds.pop();
-  const wistiaDiv = document.createElement("div");
-  wistiaDiv.setAttribute("class", "wistia_embed wistia_async_7r020nfxnb");
-  wistiaDiv.setAttribute("style", "height:360px;position:relative;width:640px");
-  document.getElementById("parent").prepend(wistiaDiv);
   window._wq = window._wq || [];
-  _wq.push({
-    id: "7r020nfxnb",
-    options: {
-      plugin: {
-	"captions-v1": {
-	  onByDefault: true,
-	  language: 'eng'
-	}
-      }
-    }
+  window._wq.push({
+    revoke: englishConfig,
   });
+  setTimeout(() => {
+    const wistiaDiv = document.createElement("div");
+    wistiaDiv.setAttribute("class", "wistia_embed wistia_async_7r020nfxnb");
+    wistiaDiv.setAttribute("style", "height:360px;position:relative;width:640px");
+    document.getElementById("parent").prepend(wistiaDiv);
+    window._wq = window._wq || [];
+    window._wq.push({
+      id: "7r020nfxnb",
+      options: {
+        plugin: {
+          "captions-v1": {
+            onByDefault: true,
+            language: 'vie'
+          }
+        }
+      }
+    });
+  }, 1000);
 }
 </script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <div id="parent">
   <div class="wistia_embed wistia_async_7r020nfxnb" style="height:360px;position:relative;width:640px"></div>
-  <button onclick="reloadSameVideoWithDifferentSubtitlesLanguageSpecified()" style="margin-top: 20px;">reload same video with different subtitles language specified</button>
+  <button onclick="revokeThenReloadSameVideoWithDifferentSubtitlesLanguageSpecified()" style="margin-top: 20px;">revoke then reload same video with different subtitles language specified</button>
 </div>
