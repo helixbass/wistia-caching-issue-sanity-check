@@ -1,10 +1,10 @@
 <script>
 
-function reloadSameVideoWithDifferentSubtitlesLanguageSpecifiedUsingClassName() {
+function reloadSameVideoWithDifferentPlayerColorAndTurnstilePluginOptionsSpecifiedUsingClassName() {
   document.querySelector(".wistia_async_7r020nfxnb").remove();
   setTimeout(() => {
     const wistiaDiv = document.createElement("div");
-    wistiaDiv.setAttribute("class", "wistia_embed wistia_async_7r020nfxnb plugin[captions-v1][language]=eng");
+    wistiaDiv.setAttribute("class", "wistia_embed wistia_async_7r020nfxnb playerColor=ff0000 plugin[requireEmail-v1][topText]=secondTopText plugin[requireEmail-v1][bottomText]=secondBottomText plugin[requireEmail-v1][time]=3");
     wistiaDiv.setAttribute("style", "height:360px;position:relative;width:640px");
     document.getElementById("parent").prepend(wistiaDiv);
   }, 1000);
@@ -12,6 +12,6 @@ function reloadSameVideoWithDifferentSubtitlesLanguageSpecifiedUsingClassName() 
 </script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <div id="parent">
-  <div class="wistia_embed wistia_async_7r020nfxnb plugin[captions-v1][language]=vie" style="height:360px;position:relative;width:640px"></div>
-  <button onclick="reloadSameVideoWithDifferentSubtitlesLanguageSpecifiedUsingClassName()" style="margin-top: 20px;">reload same video with different subtitles language specified using class name</button>
+  <div class="wistia_embed wistia_async_7r020nfxnb playerColor=0000ff plugin[requireEmail-v1][topText]=firstTopText plugin[requireEmail-v1][bottomText]=firstBottomText plugin[requireEmail-v1][time]=1" style="height:360px;position:relative;width:640px"></div>
+  <button onclick="reloadSameVideoWithDifferentPlayerColorAndTurnstilePluginOptionsSpecifiedUsingClassName()" style="margin-top: 20px;">reload same video with different player color and turnstile plugin options specified using class name</button>
 </div>
